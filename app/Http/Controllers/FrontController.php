@@ -8,17 +8,27 @@ use App\Banners;
 use App\Products;
 use App\Supplier;
 use App\ContactUs;
-use App\Http\Requests\ContactRequest;
+use App\Application;
 use App\ProductsType;
 use App\ProductVideo;
+use App\Http\Requests\ContactRequest;
+
+
 
 class FrontController extends Controller
 {
     public function index() {
+
         $indexData = [];
 
         $indexData['banners'] = Banners::orderBy('sort','desc')->get();
+
+        $indexData['about'] = AboutUs::first();
+
+        $indexData['application'] = Application::orderBy('sort','asc')->get();
+
         $indexData['all_news'] = News::orderBy('sort','desc')->take(4)->get();
+
         $indexData['productTypes'] = ProductsType::orderBy('sort','desc')->get();
 
         return view('front.index',compact('indexData'));

@@ -9,8 +9,8 @@
         <div class="container px-5 pt-20 pb-10 mx-auto">
             <div class="flex flex-wrap w-full mb-10">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                    <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900 text-custom-purple">{{$product_type->type_name_en}}</h1>
-                    <div class="h-1 w-20 bg-custom-purple rounded"></div>
+                    <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900 text-main">{{$product_type->type_name_en}}</h1>
+                    <div class="h-1 w-20 bg-main rounded"></div>
                 </div>
             </div>
             <section class="text-black body-font">
