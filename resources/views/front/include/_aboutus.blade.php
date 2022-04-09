@@ -8,9 +8,9 @@
                         <div class="h-1 w-20 bg-main rounded"></div>
                     </div>
                 </div>
-                <img src="{{$indexData['about']->image}}" alt="About Us">
+                <img src="{{$company_info['about_us']['image']}}" alt="About Us">
             </div>
-            <div class="lg:w-2/3 md:w-1/2 md:pl-10 md:py-6 font-bold text-black leading-loose md:pt-0 pt-10 whitespace-pre-line">{{$indexData['about']->content_ch}}</div>
+            <div class="lg:w-2/3 md:w-1/2 md:pl-10 md:py-6 font-bold text-black leading-loose md:pt-0 pt-10 whitespace-pre-line">{!!$company_info['about_us']['desc']!!}</div>
         </div>
     </div>
 </section>

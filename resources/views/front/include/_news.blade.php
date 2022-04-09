@@ -1,5 +1,5 @@
 <section class="text-white body-font mt-20 bg-cover" id="News"
-style="background-image:url(/img/news_background.jpg)">
+style="background-image:url({{$company_info['news']['bg']}})">
 <div class="container px-5 py-20 mx-auto">
     <div class="flex flex-wrap w-full mb-10">
         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">

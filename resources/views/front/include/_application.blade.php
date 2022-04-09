@@ -9,7 +9,7 @@
                 </div>
                 <div class="flex flex-wrap -m-2">
 
-                    @foreach($indexData['application'] as $application)
+                    @foreach($company_info['applications'] as $application)
                         <div class="p-2 lg:w-1/4 md:w-1/2 w-full text-white">
                             <div class="h-full text-center p-4 rounded-lg transform duration-300 hover:scale-105">
                                 <img class="rounded-full object-cover object-center inline-block w-64 h-64"

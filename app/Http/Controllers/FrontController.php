@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Seo;
 use App\News;
 use App\AboutUs;
 use App\Banners;
@@ -11,21 +12,26 @@ use App\ContactUs;
 use App\Application;
 use App\ProductsType;
 use App\ProductVideo;
+use Illuminate\Support\Facades\View;
 use App\Http\Requests\ContactRequest;
 
 
 
 class FrontController extends Controller
 {
+    public function __construct(){
+        $company_info = config('company_info');
+        View::share('company_info', $company_info);
+
+        $seo = Seo::find(1);
+        View::share('seo', $seo);
+    }
+
     public function index() {
 
         $indexData = [];
 
         $indexData['banners'] = Banners::orderBy('sort','desc')->get();
-
-        $indexData['about'] = AboutUs::first();
-
-        $indexData['application'] = Application::orderBy('sort','asc')->get();
 
         $indexData['all_news'] = News::orderBy('sort','desc')->take(4)->get();
 

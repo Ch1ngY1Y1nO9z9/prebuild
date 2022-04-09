@@ -16,9 +16,13 @@
     <main>
         @include('front.include._banner', $indexData['banners'])
 
-        @include('front.include._aboutus', $indexData['about'])
+        @if(isset($company_info['applications']) && count($company_info['applications']))
+            @include('front.include._aboutus')
+        @endif
 
-        @include('front.include._application', $indexData['application'])
+        @if(isset($company_info['applications']) && count($company_info['applications']))
+            @include('front.include._application')
+        @endif
 
         @include('front.include._news', $indexData['all_news'])
 
